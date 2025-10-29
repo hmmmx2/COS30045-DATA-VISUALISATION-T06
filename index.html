@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T05 - Multi-Chart Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/PowerIcon.png">
+</head>
+<body>
+    <!-- Header - YOUR ORIGINAL NAVBAR -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/PowerIcon.png" alt="Company Logo" class="logo-icon">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link active" onclick="navigateTo('index.html')">Home</a></li>
+                <li><a href="televisions.html" class="nav-link" onclick="navigateTo('televisions.html')">Television</a></li>
+                <li><a href="aboutus.html" class="nav-link" onclick="navigateTo('aboutus.html')">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="circular"></div>
+        <div class="circular-2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">D3 Charts Dashboard</h1>
+                <p class="hero-subtitle">TV Power Consumption & Energy Price Analysis</p>
+                <a href="#charts-section" class="scroll-btn">View Charts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section id="introduction" class="data-story-section">
+        <div class="container">
+            <div class="intro-box">
+                <h2>About This Dashboard</h2>
+                <p>This dashboard visualizes TV energy consumption data and Australian electricity spot prices. 
+                   It includes four interactive D3.js charts: a scatter plot showing the relationship between 
+                   star ratings and energy consumption, a line chart tracking electricity prices from 1998-2024, 
+                   a bar chart comparing energy use by screen technology for 55-inch TVs, and a donut chart 
+                   showing overall energy consumption by screen type.</p>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Footer - YOUR ORIGINAL FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-reference">
+                <h3>Reference:</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">
+                            How TO - Smooth Scroll from W3Schools
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/html/html_favicon.asp">
+                            How To Add a Favicon in HTML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://d3js.org/">
+                            D3.js - Data-Driven Documents
+                        </a>
+                    </li>                  
+                </ul>
+            </div>
+            <div class="footer-reference">
+                <h3>UI/UX Design:</h3>
+                <a href="https://www.figma.com/design/iy8hDDI6qgNpbVDqlhprhg/Data-Visualization?node-id=0-1&t=o2JHV471DbMfGcxA-1">
+                    COS30045 Data Visualisation, Web Design From Scratch by Alwin Jing Xue TAY. 104399430
+                </a>
+            </div>
+            <div class="vl"></div>
+            <div class="footer-copyright">
+                <p class="footer-text">©2025 Alwin Jing Xue TAY. 104399430. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Chart Scripts -->
+    <script src="js/scatter.js"></script>
+    <script src="js/line.js"></script>
+    <script src="js/bar.js"></script>
+    <script src="js/donut.js"></script>
+</body>
+</html>

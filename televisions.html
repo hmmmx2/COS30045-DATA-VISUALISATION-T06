@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Television Energy Consumption - Data Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/PowerIcon.png">
+</head>
+<body>
+    
+    <!-- Header - YOUR ORIGINAL NAVBAR -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/PowerIcon.png" alt="Company Logo" class="logo-icon">
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link" onclick="navigateTo('index.html')">Home</a></li>
+                <li><a href="televisions.html" class="nav-link active" onclick="navigateTo('televisions.html')">Television</a></li>
+                <li><a href="aboutus.html" class="nav-link" onclick="navigateTo('aboutus.html')">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section id="main-section" class="charts-container" style="padding-top: 100px;">
+        <div class="container">
+            <h1 style="text-align: center; color: #7D6744; margin-bottom: 40px;">TV Energy Consumption</h1>
+            
+            <!-- Histogram Chart Card -->
+            <div class="chart-card">
+                <h3 class="chart-title">Energy Consumption for Different TV Screen Types and Sizes</h3>
+                <p class="chart-description">
+                    Most TVs on sale in Australia are LED and they vary considerably in energy consumption
+                </p>
+                
+                <!-- Filter Buttons -->
+                <div id="filters_screen" class="filters-container"></div>
+                
+                <!-- Histogram Chart -->
+                <div id="histogram" class="chart-wrapper"></div>
+            </div>
+            
+            <!-- Scatterplot Chart Card -->
+            <div class="chart-card" style="margin-top: 40px;">
+                <h3 class="chart-title">Energy Consumption by Star Rating</h3>
+                <p class="chart-description">
+                    TVs with same star rating can have very different energy consumption. It all depends on screen size and technology type.
+                </p>
+                
+                <!-- Scatterplot Chart -->
+                <div id="scatterplot" class="chart-wrapper"></div>
+            </div>
+            
+            <!-- Data Source Information -->
+            <div class="data-source" style="margin-top: 40px;">
+                <h4>Data source</h4>
+                <p>
+                    <a href="https://data.gov.au/data/dataset/559708e5-480e-4f94-8429-c4fb13c8b75e" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Energy Rating Data for household appliances – Televisions
+                    </a>
+                </p>
+                <p>Downloaded Jan 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - YOUR ORIGINAL FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-reference">
+                <h3>Reference:</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.w3schools.com/howto/howto_css_smooth_scroll.asp">
+                            How TO - Smooth Scroll from W3Schools
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/html/html_favicon.asp">
+                            How To Add a Favicon in HTML
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://d3js.org/">
+                            D3.js - Data-Driven Documents
+                        </a>
+                    </li>                  
+                </ul>
+            </div>
+            <div class="footer-reference">
+                <h3>UI/UX Design:</h3>
+                <a href="https://www.figma.com/design/iy8hDDI6qgNpbVDqlhprhg/Data-Visualization?node-id=0-1&t=o2JHV471DbMfGcxA-1">
+                    COS30045 Data Visualisation, Web Design From Scratch by Alwin Jing Xue TAY. 104399430
+                </a>
+            </div>
+            <div class="vl"></div>
+            <div class="footer-copyright">
+                <p class="footer-text">©2025 Alwin Jing Xue TAY. 104399430. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts - ORDER IS IMPORTANT! -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    
+    <!-- D3.js Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- T06 JavaScript Files (Load in correct order) -->
+    <script src="js/shared-constants.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/load-data.js"></script>
+</body>
+</html>
